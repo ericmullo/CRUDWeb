@@ -1,0 +1,104 @@
+/* === Look limpio y moderno, sin cambiar tu HTML === */
+
+/* Fondo general y “tarjeta” centrada con el propio <body> */
+html{
+  min-height:100%;
+  background: radial-gradient(800px 500px at 15% 0%, #e0e7ff 0%, transparent 60%),
+              radial-gradient(900px 600px at 100% 10%, #c7d2fe 0%, transparent 55%),
+              #eef2ff;
+}
+body {
+  font-family: "Segoe UI", Roboto, Arial, Helvetica, sans-serif;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 28px 30px;
+  background: #ffffff;
+  color: #0f172a;
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(2,6,23,.10), 0 4px 14px rgba(2,6,23,.08);
+  line-height: 1.6;
+}
+
+/* Títulos */
+h1, h2 { margin: 0 0 14px }
+h1{
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: .2px;
+  background: linear-gradient(90deg,#1e3a8a,#2563eb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+h2{
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e3a8a;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 6px;
+}
+
+/* Etiquetas e inputs */
+label { display: block; margin-top: 12px; font-weight: 600; color:#334155 }
+input, button {
+  padding: 10px 12px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-size: 15px;
+  transition: border-color .2s, box-shadow .2s, transform .06s;
+}
+input{
+  width: 100%;
+  background: #f8fafc;
+}
+input:focus{
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37,99,235,.15);
+}
+
+/* Botón bonito */
+button{
+  border: none;
+  color: #fff;
+  background: linear-gradient(90deg,#2563eb,#1e40af);
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: .2px;
+  box-shadow: 0 8px 18px rgba(37,99,235,.25);
+}
+button:hover{ filter: brightness(1.05) }
+button:active{ transform: translateY(1px) }
+
+/* Enlaces */
+a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+a:hover { text-decoration: underline }
+
+/* Tabla elegante */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;              /* redondeo visible */
+  background: #fff;
+}
+th, td { text-align: left; padding: 12px 14px }
+th {
+  background: linear-gradient(90deg,#1e3a8a,#1d4ed8);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+}
+tr:nth-child(even) { background: #f8fafc }
+tr:hover { background: #eef2ff }
+
+/* Pequeños detalles */
+::selection{ background:#c7d2fe; color:#0f172a }
