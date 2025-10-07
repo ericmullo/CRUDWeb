@@ -21,7 +21,7 @@
 
 ---
 
-<h2 align="center">🚀 Instalación & Ejecución</h2>
+<h2 align="center">Ejecución</h2>
 
 <p align="center">
 Para ejecutar el proyecto localmente, sigue los pasos:
