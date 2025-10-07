@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Productos</title>
+    <link rel="stylesheet" th:href="@{/css/app.css}">
+</head>
+<body>
+<div class="container">
+
+    <!-- Título principal -->
+    <h1>Lista de Productos</h1>
+    <p>Administra tus productos: crea, edita o elimina según necesites.</p>
+
+    <!-- Tabla de productos -->
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="producto : ${productos}">
+            <td th:text="${producto.id}"></td>
+            <td th:text="${producto.nombre}"></td>
+            <td th:text="${producto.precio}"></td>
+            <td>
+                <a th:href="@{'/productos/editar/' + ${producto.id}}">Editar</a> |
+                <a th:href="@{'/productos/eliminar/' + ${producto.id}}">Eliminar</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- Botones de acción -->
+    <div style="margin-top: 25px;">
+        <a th:href="@{/productos/nuevo}" class="btn">+ Nuevo Producto</a>
+    </div>
+
+    <!-- Botón volver al login -->
+    <div style="margin-top: 40px; text-align: center;">
+        <a th:href="@{/login}" class="volver">← Volver al Login</a>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Demo MVC</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+<div class="login-container">
+    <div class="left-side">
+        <h1>Bienvenido al Sistema</h1>
+        <p>Accede con tu usuario y contraseña para gestionar los productos de la aplicación MVC.</p>
+    </div>
+
+    <div class="right-side">
+        <h2>INICIAR SESIÓN</h2>
+        <form th:action="@{/login}" method="post">
+            <div class="input-box">
+                <input type="text" name="username" placeholder="Usuario" required />
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" placeholder="Contraseña" required />
+            </div>
+
+
+
+            <div class="options">
+                <label><input type="checkbox" /> Recordarme</label>
+                <div>
+                    <a th:href="@{/register}">Registrar</a> |
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+            </div>
+
+
+            <button type="submit" class="btn-login">Iniciar Sesión</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
