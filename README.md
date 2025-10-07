@@ -39,4 +39,4 @@ config/: DataLoader inicializa un usuario y libros de ejemplo.
 
 templates/: vistas Thymeleaf (login.html, books/list.html, books/form.html).
 
-El proyecto está completamente funcional y preparado para su entrega académica.
+El proyecto está completamente funcional y preparado para entrega académica.
