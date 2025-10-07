@@ -14,15 +14,20 @@
 
     <div class="right-side">
         <h2>INICIAR SESIÓN</h2>
+
+        <!-- Mensajes de error y logout -->
+        <div th:if="${param.error}" class="alert error">Usuario o contraseña incorrectos.</div>
+        <div th:if="${param.logout}" class="alert info">Sesión cerrada correctamente.</div>
+
         <form th:action="@{/login}" method="post">
             <div class="input-box">
                 <input type="text" name="username" placeholder="Usuario" required />
             </div>
             <div class="input-box">
                 <input type="password" name="password" placeholder="Contraseña" required />
+                <!-- Mensaje justo debajo del campo -->
+                <small th:if="${param.error}" class="error-text">Usuario o contraseña incorrectos</small>
             </div>
-
-
 
             <div class="options">
                 <label><input type="checkbox" /> Recordarme</label>
@@ -32,10 +37,36 @@
                 </div>
             </div>
 
-
             <button type="submit" class="btn-login">Iniciar Sesión</button>
         </form>
     </div>
 </div>
+
+<!-- Estilos mínimos -->
+<style>
+    .alert {
+        padding: 10px 12px;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        font-size: 0.95rem;
+        text-align: center;
+    }
+    .alert.error {
+        background-color: #ffe6e6;
+        color: #b30000;
+        border: 1px solid #b30000;
+    }
+    .alert.info {
+        background-color: #e6f7ff;
+        color: #005580;
+        border: 1px solid #0099cc;
+    }
+    .error-text {
+        color: #b30000;
+        font-size: 0.9rem;
+        margin-top: 6px;
+        display: block;
+    }
+</style>
 </body>
 </html>
